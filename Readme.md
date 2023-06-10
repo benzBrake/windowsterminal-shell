@@ -1,6 +1,6 @@
 # PowerShell Scripts to Install/Uninstall Context Menu Items for Windows Terminal
 
-*A project backed by [LeXtudio Inc.](https://www.lextudio.com)*
+_A project backed by [LeXtudio Inc.](https://www.lextudio.com)_
 
 ## Install
 
@@ -8,11 +8,11 @@
 1. [Install PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7).
 1. Launch PowerShell 7 console as administrator, and run `install.ps1` to install context menu items to Windows Explorer.
 
-   > Quickest way to run the latest script from GitHub at an elevated PowerShell 7 console is
+    > Quickest way to run the latest script from GitHub at an elevated PowerShell 7 console is
 
-   > ``` powershell
-   > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/lextm/windowsterminal-shell/master/install.ps1'))
-   > ```
+    > ```powershell
+    > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/benzBrake/windowsterminal-shell/master/install.ps1'))
+    > ```
 
 Now the menu items are added to Windows Explorer context menu.
 
@@ -31,11 +31,17 @@ Figure 2: Flat layout
 Figure 3: Mini layout
 
 ## Uninstall
+
 1. Run `uninstall.ps1` to uninstall context menu items from Windows Explorer.
 
 > To uninstall an alternative layout (like `mini`), run `uninstall.ps1 mini`.
 
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/benzBrake/windowsterminal-shell/master/uninstall.ps1'))
+```
+
 ## Notes
+
 The current release only supports Windows 10 machines (Windows Terminal restriction) and Windows Terminal installed via the store or .appx file.
 
 > If Windows Terminal is installed via Scoop, [scripts from another repo](https://github.com/grimux/windowsterminal-shell-scoop/tree/scoop-support) might help.
@@ -53,4 +59,5 @@ PowerShell 7 installed from Microsoft Store is not supported by the scripts (mor
 Downloading Windows Terminal icon from GitHub (in `install.ps1`) requires internet connection, but in general is just an optional step that won't be executed in most cases.
 
 ## More Products
+
 To learn more about other cool products from LeXtudio Inc. , please visit [our homepage](https://www.lextudio.com/#projects).
